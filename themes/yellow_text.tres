@@ -1,0 +1,18 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bdoc5hu8xke7a"]
+
+[ext_resource type="StyleBox" uid="uid://80eoo31nrtpq" path="res://scenes/blue_with_border.tres" id="1_03ywk"]
+[ext_resource type="FontFile" uid="uid://uvywxv1vkwvv" path="res://fonts/Ubuntu/Ubuntu-Bold.ttf" id="1_ulgke"]
+
+[resource]
+default_font = ExtResource("1_ulgke")
+default_font_size = 48
+Button/colors/font_color = Color(0.972549, 0.784314, 0.0666667, 1)
+Button/colors/font_focus_color = Color(0.972549, 0.784314, 0.0666667, 1)
+Button/colors/font_hover_color = Color(0.133333, 0.168627, 0.203922, 1)
+Button/styles/disabled = ExtResource("1_03ywk")
+Button/styles/focus = ExtResource("1_03ywk")
+Button/styles/hover = ExtResource("1_03ywk")
+Button/styles/normal = ExtResource("1_03ywk")
+Button/styles/pressed = ExtResource("1_03ywk")
+RichTextLabel/colors/default_color = Color(0.972549, 0.784314, 0.0666667, 1)
+RichTextLabel/styles/normal = ExtResource("1_03ywk")

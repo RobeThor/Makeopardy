@@ -1,0 +1,194 @@
+{
+	"categories": {
+		"cat1": {
+			"categoryName": "MAKE",
+			"q1": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			},
+			"q2": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			},
+			"q3": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			},
+			"q4": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			},
+			"q5": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			}
+		},
+		"cat2": {
+			"categoryName": "SPILL",
+			"q1": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			},
+			"q2": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			},
+			"q3": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			},
+			"q4": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			},
+			"q5": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			}
+		},
+		"cat3": {
+			"categoryName": "SPORT",
+			"q1": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			},
+			"q2": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			},
+			"q3": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			},
+			"q4": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			},
+			"q5": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			}
+		},
+		"cat4": {
+			"categoryName": "NOSTALGI",
+			"q1": {
+				"question": "I Avatar the Last Airbender, hvilket element kan Toph Beifong kontrollere?",
+				"alt1": "Ild",
+				"alt2": "Jord",
+				"alt3": "Vann",
+				"correctAlt": 2
+			},
+			"q2": {
+				"question": "Hvilken av disse er IKKE en av starterpokemon-ene fra generasjon 4 i Sinnoh?",
+				"alt1": "Turtwig",
+				"alt2": "Piplup",
+				"alt3": "Torchic",
+				"correctAlt": 3
+			},
+			"q3": {
+				"question": "I Tour the Kids Norway, hva heter egentlig gutten som sa han het Thea?",
+				"alt1": "Jens",
+				"alt2": "Nikolai",
+				"alt3": "Sondre",
+				"correctAlt": 2
+			},
+			"q4": {
+				"question": "Hva var den første virale videoen til Smosh (aka første som var \"Most viewed\" på YouTube)?",
+				"alt1": "Food Battle",
+				"alt2": "Harry Potter Deleted Scenes!",
+				"alt3": "Pokemon Theme Song",
+				"correctAlt": 3
+			},
+			"q5": {
+				"question": "Hva heter alter ego-et til Lilly Truscott, bestevennen til Hanna Montana i Disney Channel serien Hanna Montana?",
+				"alt1": "Pepper Kafspatch",
+				"alt2": "Lola Luftnagle",
+				"alt3": "Veronica Sparkel",
+				"correctAlt": 2
+			}
+		},
+		"cat5": {
+			"categoryName": "VIKTIGE DATOER",
+			"q1": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			},
+			"q2": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			},
+			"q3": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			},
+			"q4": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			},
+			"q5": {
+				"question": "",
+				"alt1": "",
+				"alt2": "",
+				"alt3": "",
+				"correctAlt": 3
+			}
+		}
+	}
+}

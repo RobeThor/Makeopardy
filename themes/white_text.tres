@@ -1,0 +1,21 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bb774gsilu77b"]
+
+[ext_resource type="FontFile" uid="uid://uvywxv1vkwvv" path="res://fonts/Ubuntu/Ubuntu-Bold.ttf" id="1_i6kgh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i6kgh"]
+bg_color = Color(0.0470588, 0.258824, 0.415686, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.133333, 0.168627, 0.203922, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[resource]
+default_font = ExtResource("1_i6kgh")
+default_font_size = 48
+RichTextLabel/colors/default_color = Color(0.862745, 0.866667, 0.870588, 1)
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_i6kgh")

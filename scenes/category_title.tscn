@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1g78irer107"]
+
+[ext_resource type="Script" uid="uid://cf26deoidgo7v" path="res://scripts/category_title.gd" id="1_nh35n"]
+[ext_resource type="Theme" uid="uid://bb774gsilu77b" path="res://themes/white_text.tres" id="2_n0lte"]
+
+[node name="CategoryTitle" type="MarginContainer"]
+light_mask = 17
+offset_right = 260.0
+offset_bottom = 185.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+script = ExtResource("1_nh35n")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+light_mask = 17
+custom_minimum_size = Vector2(260, 185)
+layout_mode = 2
+theme = ExtResource("2_n0lte")
+text = "Category Name"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1

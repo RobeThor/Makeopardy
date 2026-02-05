@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjvjhiwl00jvp"]
+
+[ext_resource type="Script" uid="uid://u1v74egqss6m" path="res://scripts/question_option.gd" id="1_mjek2"]
+[ext_resource type="Theme" uid="uid://bdoc5hu8xke7a" path="res://themes/yellow_text.tres" id="2_lus1h"]
+
+[node name="QuestionOption" type="Button"]
+light_mask = 17
+custom_minimum_size = Vector2(260, 120)
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 250.0
+offset_bottom = 175.0
+theme = ExtResource("2_lus1h")
+text = "9999"
+script = ExtResource("1_mjek2")
+
+[node name="QuestionOption" type="MarginContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(260, 185)
+offset_right = 260.0
+offset_bottom = 185.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="RichTextLabel" type="RichTextLabel" parent="QuestionOption"]
+layout_mode = 2
+theme = ExtResource("2_lus1h")
+text = "9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="." to="QuestionOption" method="_on_button_pressed"]
+[connection signal="pressed" from="." to="." method="_on_button_pressed"]

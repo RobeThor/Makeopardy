@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgwmlts31i1rx"]
+
+[ext_resource type="Script" uid="uid://cbg7dlippjgqe" path="res://scripts/game_screen.gd" id="1_3uriw"]
+[ext_resource type="Texture2D" uid="uid://bicyrr52lm6wl" path="res://art/rectangle.png" id="3_3uriw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xwjjp"]
+bg_color = Color(0.972549, 0.784314, 0.0666667, 1)
+
+[sub_resource type="Theme" id="Theme_norob"]
+Panel/styles/panel = SubResource("StyleBoxFlat_xwjjp")
+
+[node name="Panel" type="Panel"]
+light_mask = 16
+custom_minimum_size = Vector2(1920, 1080)
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = SubResource("Theme_norob")
+script = ExtResource("1_3uriw")
+
+[node name="QuestionField" type="MarginContainer" parent="."]
+light_mask = 17
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="QuestionField"]
+light_mask = 17
+layout_mode = 2
+theme_override_constants/separation = 105
+
+[node name="CenterContainer" type="CenterContainer" parent="QuestionField/HBoxContainer2"]
+layout_mode = 2
+
+[node name="CategoriesContainer" type="HBoxContainer" parent="QuestionField/HBoxContainer2/CenterContainer"]
+light_mask = 17
+layout_mode = 2
+
+[node name="TeamContainer" type="VBoxContainer" parent="QuestionField/HBoxContainer2"]
+light_mask = 17
+layout_mode = 2
+alignment = 1
+
+[node name="GlobalLight" type="PointLight2D" parent="."]
+position = Vector2(957, 542.5)
+scale = Vector2(0.766107, 0.680623)
+enabled = false
+energy = 0.5
+blend_mode = 1
+range_item_cull_mask = 16
+texture = ExtResource("3_3uriw")
+texture_scale = 9.85

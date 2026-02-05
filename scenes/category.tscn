@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdcg18wmky11o"]
+
+[ext_resource type="Script" uid="uid://cy6d4myco273k" path="res://scripts/category_list.gd" id="1_2gaid"]
+
+[node name="CategoryList" type="VBoxContainer"]
+light_mask = 17
+offset_right = 280.0
+offset_bottom = 961.0
+theme_override_constants/separation = 15
+alignment = 1
+script = ExtResource("1_2gaid")
