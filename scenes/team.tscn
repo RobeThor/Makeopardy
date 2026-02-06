@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://doaejjtmc4unu"]
+[gd_scene load_steps=8 format=3 uid="uid://doaejjtmc4unu"]
 
 [ext_resource type="Script" uid="uid://c31f02qv8jvle" path="res://scripts/team.gd" id="1_jn8yb"]
 [ext_resource type="FontFile" uid="uid://uvywxv1vkwvv" path="res://fonts/Ubuntu/Ubuntu-Bold.ttf" id="2_ttbh4"]
@@ -23,6 +23,16 @@ default_font = ExtResource("2_ttbh4")
 default_font_size = 48
 RichTextLabel/colors/default_color = Color(0.972549, 0.784314, 0.0666667, 1)
 RichTextLabel/styles/normal = null
+
+[sub_resource type="Gradient" id="Gradient_jn8yb"]
+offsets = PackedFloat32Array(0, 0.413793, 0.655172, 0.801724, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.851018, 0.851018, 0.851018, 1, 0.556034, 0.556034, 0.556034, 1, 0.212305, 0.212305, 0.212305, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6pm8d"]
+gradient = SubResource("Gradient_jn8yb")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
 
 [node name="Team" type="MarginContainer"]
 custom_minimum_size = Vector2(260, 185)
@@ -57,3 +67,11 @@ text = "500"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TeamLight" type="PointLight2D" parent="."]
+light_mask = 17
+position = Vector2(130.5, 95)
+scale = Vector2(5.23438, 3.65625)
+enabled = false
+range_item_cull_mask = 17
+texture = SubResource("GradientTexture2D_6pm8d")

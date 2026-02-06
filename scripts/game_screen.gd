@@ -8,9 +8,12 @@ extends Panel
 @onready var categories_container = $QuestionField/HBoxContainer2/CenterContainer/CategoriesContainer
 
 var file = "res://jeopardyFormat.json"
+var teamArray = []
 
 func _ready() -> void:
 	var json_string = FileAccess.get_file_as_string(file)
+	GlobalData.scores_updated.connect(_on_scores_updated)
+	GlobalData.change_current_team.connect(_on_change_team)
 	
 	var json_as_dict: Dictionary = JSON.parse_string(json_string)
 	if !json_as_dict:
@@ -31,8 +34,8 @@ func createTeams():
 	for i in range(5):
 		var teamInstance = team_scene.instantiate()
 		$QuestionField/HBoxContainer2/TeamContainer.add_child(teamInstance)
-		teamInstance.setTeam("Team %d" % (i+1))
-		pass
+		teamInstance.setTeam("Team %d" % (i))
+		teamArray.append(teamInstance)
 
 func _on_popup_question(reward, questionText, alt1, alt2, alt3, correctAnswer):
 	var questionContainerInstance = question_container_scene.instantiate()
@@ -46,3 +49,10 @@ func _on_close_popup_question():
 	GlobalData.question_open = false
 	$GlobalLight.enabled = false
 	
+func _on_scores_updated(new_scores: Array):
+	for i in range(5):
+		teamArray[i].setScore(new_scores[i])
+
+func _on_change_team(teamNumber: int):
+	for i in range(teamArray.size()):
+		teamArray[i].toggleLight(i == teamNumber)

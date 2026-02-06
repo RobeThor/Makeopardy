@@ -13,3 +13,9 @@ func _process(delta: float) -> void:
 func setTeam(teamName: String):
 	$VBoxContainer/TeamName.text = teamName
 	$VBoxContainer/Score.text = "0"
+
+func setScore(score: int):
+	$VBoxContainer/Score.text = str(score)
+	
+func toggleLight(state: bool):
+	$TeamLight.enabled = state
