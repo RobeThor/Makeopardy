@@ -3,115 +3,115 @@
 		"cat1": {
 			"categoryName": "MAKE",
 			"q1": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
-				"correctAlt": 3
+				"question": "Når ble MAKE NTNU stiftet?",
+				"alt1": "2017",
+				"alt2": "2018",
+				"alt3": "2019",
+				"correctAlt": 1
 			},
 			"q2": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
-				"correctAlt": 3
+				"question": "Når ble Jenny med i MAKE?",
+				"alt1": "V19",
+				"alt2": "H19",
+				"alt3": "V20",
+				"correctAlt": 2
 			},
 			"q3": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
-				"correctAlt": 3
+				"question": "Hva er det eldste arrangementet registrert på Make NTNU sine arrangement-sider?",
+				"alt1": "Robotkrig workshop",
+				"alt2": "Halloween workshop",
+				"alt3": "3D-scanning workshop",
+				"correctAlt": 1
 			},
 			"q4": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
+				"question": "Hvem var den ANDRE personen som var leder av MAKE?",
+				"alt1": "Torbjørn Antonsen",
+				"alt2": "Aksel Ludvigsen",
+				"alt3": "Mina Spremic",
 				"correctAlt": 3
 			},
 			"q5": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
-				"correctAlt": 3
-			}
+				"question": "Hvor mange commits har Anders Hovden på web repoet?",
+				"alt1": "1432",
+				"alt2": "996",
+				"alt3": "737",
+				"correctAlt": 2
+			},
 		},
 		"cat2": {
 			"categoryName": "SPILL",
 			"q1": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
-				"correctAlt": 3
+				"question": "Hva heter musikeren i Animal Crossing?",
+				"alt1": "Tom Nook",
+				"alt2": "K.K. Slider",
+				"alt3": "Blathers",
+				"correctAlt": 2
 			},
 			"q2": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
-				"correctAlt": 3
+				"question": "Hvem er det som gir ut Just Dance spillene?",
+				"alt1": "Ubisoft",
+				"alt2": "EA Games",
+				"alt3": "Activision Blizzard",
+				"correctAlt": 1
 			},
 			"q3": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
-				"correctAlt": 3
+				"question": "I mattespill-serien Josefine, hva heter bestevennen til Josefine?",
+				"alt1": "Theo",
+				"alt2": "Sofus",
+				"alt3": "Jonas",
+				"correctAlt": 2
 			},
 			"q4": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
+				"question": "Emoten \"biblethump\" som var på Twitch.tv frem til 2024 representerer en karakter fra et indie-spill. Hvilket spill?",
+				"alt1": "Baba is You",
+				"alt2": "Super Meat Boy",
+				"alt3": "The Binding of Isaac",
 				"correctAlt": 3
 			},
 			"q5": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
-				"correctAlt": 3
+				"question": "I Cyberpunk 2077 er det en desperat karakter, best kjent som \"Flaming Crotch Man\", som gir et side-oppdrag om å få han til en lege som kan fjerne hans \"defekte implantat\". Hva heter gaming YouTuberen/Streameren som er stemmeskuespilleren til Flaming Crotch Man?",
+				"alt1": "Jesse Cox",
+				"alt2": "Charles White Jr.",
+				"alt3": "Seán McLoughlin",
+				"correctAlt": 1
 			}
 		},
 		"cat3": {
 			"categoryName": "SPORT",
 			"q1": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
+				"question": "Hvilken av disse er IKKE en gruppe i NTNUI?",
+				"alt1": "Vannsklie",
+				"alt2": "Skate",
+				"alt3": "Parkour",
 				"correctAlt": 3
 			},
 			"q2": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
-				"correctAlt": 3
+				"question": "Den finske konkurransen eukonkanto er et løp hvor konkurrentene må bære på noe svært spesielt. Hva må de bære på?",
+				"alt1": "En levende fisk",
+				"alt2": "En kone",
+				"alt3": "En tre-utskjæring av den finske presidenten",
+				"correctAlt": 2
 			},
 			"q3": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
+				"question": "Den første australske konkurransen i tunfisk-kasting ble holdt i 1979, der man har som mål å kaste en tunfisk så langt som mulig. Hvor mye veier vanligvis fisken?",
+				"alt1": "5kg",
+				"alt2": "7kg",
+				"alt3": "10kg",
 				"correctAlt": 3
 			},
 			"q4": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
-				"correctAlt": 3
+				"question": "I Windsor Pumpkin Regatte, som blir arrangert i Canada, padler man i et løp med kayaker laget av gresskar. Hvor langt er løpet?",
+				"alt1": "800m",
+				"alt2": "400m",
+				"alt3": "1600m",
+				"correctAlt": 1
 			},
 			"q5": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
-				"correctAlt": 3
+				"question": "I sporten kamel-hopping fra Yemen, hvor mange kameler hoppet verdensrekordholderen Zaid Omer over?",
+				"alt1": "6",
+				"alt2": "4",
+				"alt3": "5",
+				"correctAlt": 1
 			}
 		},
 		"cat4": {
@@ -155,38 +155,38 @@
 		"cat5": {
 			"categoryName": "VIKTIGE DATOER",
 			"q1": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
-				"correctAlt": 3
+				"question": "Hvilket år falt Berlinmuren?",
+				"alt1": "1987",
+				"alt2": "1989",
+				"alt3": "1991",
+				"correctAlt": 2
 			},
 			"q2": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
-				"correctAlt": 3
+				"question": "Når ble alle skoler stengt ned i Norge under korona-pandemien?",
+				"alt1": "25. februar 2020",
+				"alt2": "12. mars 2020",
+				"alt3": "4. april 2020",
+				"correctAlt": 2
 			},
 			"q3": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
-				"correctAlt": 3
+				"question": "Hvilket år gitt minecraft-youtuberen Technoblade bort, som ble annonsert gjennom en video kalt \"so long nerds\"?",
+				"alt1": "2021",
+				"alt2": "2022",
+				"alt3": "2023",
+				"correctAlt": 2
 			},
 			"q4": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
-				"correctAlt": 3
+				"question": "Hvilket år ble Donald Trump, George W. Bush, og Bill Clinton født?",
+				"alt1": "1946",
+				"alt2": "1944",
+				"alt3": "1945",
+				"correctAlt": 1
 			},
 			"q5": {
-				"question": "",
-				"alt1": "",
-				"alt2": "",
-				"alt3": "",
+				"question": "Når har Sivert fra Hackerspace bursdag?",
+				"alt1": "22. februar",
+				"alt2": "8. juni",
+				"alt3": "30. august",
 				"correctAlt": 3
 			}
 		}
