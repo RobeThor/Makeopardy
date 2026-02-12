@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://b31llil8ubwyr"]
+
+[ext_resource type="Texture2D" uid="uid://bejqnlsrte6yr" path="res://art/jeopardy.svg" id="1_redmh"]
+[ext_resource type="Texture2D" uid="uid://cvuciivo5ymuw" path="res://art/MAKE NTNU logo skygge.png" id="2_6tpak"]
+[ext_resource type="Texture2D" uid="uid://xms2k0hlcb7i" path="res://art/MAKE NTNU logo.png" id="2_574r7"]
+
+[sub_resource type="Gradient" id="Gradient_574r7"]
+offsets = PackedFloat32Array(0.818965, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6tpak"]
+gradient = SubResource("Gradient_574r7")
+
+[node name="MarginContainer" type="MarginContainer"]
+offset_right = 1000.0
+offset_bottom = 282.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_redmh")
+stretch_mode = 4
+
+[node name="TextureRect4" type="TextureRect" parent="TextureRect"]
+offset_left = -2.0
+offset_top = -3.0
+offset_right = 254.0
+offset_bottom = 293.0
+texture = SubResource("GradientTexture1D_6tpak")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = -27.0
+offset_top = 252.0
+offset_right = 341.0
+offset_bottom = 334.0
+rotation = -0.872665
+texture = ExtResource("2_574r7")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect"]
+visible = false
+layout_mode = 0
+offset_left = -24.0
+offset_top = 242.0
+offset_right = 344.0
+offset_bottom = 324.0
+rotation = -0.872665
+texture = ExtResource("2_6tpak")
+expand_mode = 1
+stretch_mode = 4

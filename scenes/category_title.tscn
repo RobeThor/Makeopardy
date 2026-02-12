@@ -5,8 +5,17 @@
 
 [node name="CategoryTitle" type="MarginContainer"]
 light_mask = 17
-offset_right = 260.0
-offset_bottom = 185.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -102.5
+offset_right = 140.0
+offset_bottom = 102.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
@@ -15,7 +24,7 @@ script = ExtResource("1_nh35n")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 light_mask = 17
-custom_minimum_size = Vector2(260, 185)
+custom_minimum_size = Vector2(260, 120)
 layout_mode = 2
 theme = ExtResource("2_n0lte")
 text = "Category Name"

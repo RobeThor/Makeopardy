@@ -18,6 +18,8 @@ func setData(score: int, questionData: Dictionary):
 	alt2 = questionData["alt2"]
 	alt3 = questionData["alt3"]
 	correctAnswer = questionData["correctAlt"]
+	if questionText.is_empty():
+		print("Missing question with reward ", reward)
 
 func _on_button_pressed() -> void:
 	if GlobalData.question_open:

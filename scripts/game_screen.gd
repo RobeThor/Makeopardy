@@ -5,7 +5,7 @@ extends Panel
 @export var question_container_scene := preload("res://scenes/question_container.tscn")
 @export var team_scene := preload("res://scenes/team.tscn")
 
-@onready var categories_container = $QuestionField/HBoxContainer2/CenterContainer/CategoriesContainer
+@onready var categories_container = $QuestionField/HBoxContainer2/CenterContainer/VBoxContainer/CategoriesContainer
 
 var file = "res://jeopardyFormat.json"
 var teamArray = []
@@ -50,7 +50,7 @@ func _on_close_popup_question():
 	$GlobalLight.enabled = false
 	
 func _on_scores_updated(new_scores: Array):
-	for i in range(5):
+	for i in range(teamArray.size()):
 		teamArray[i].setScore(new_scores[i])
 
 func _on_change_team(teamNumber: int):

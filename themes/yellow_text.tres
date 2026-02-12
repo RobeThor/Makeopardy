@@ -16,3 +16,4 @@ Button/styles/normal = ExtResource("1_03ywk")
 Button/styles/pressed = ExtResource("1_03ywk")
 RichTextLabel/colors/default_color = Color(0.972549, 0.784314, 0.0666667, 1)
 RichTextLabel/styles/normal = ExtResource("1_03ywk")
+TextEdit/font_sizes/font_size = 48
