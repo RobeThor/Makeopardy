@@ -80,3 +80,5 @@ texture = SubResource("GradientTexture2D_6pm8d")
 light_mask = 0
 visibility_layer = 0
 layout_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

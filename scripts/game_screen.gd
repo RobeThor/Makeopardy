@@ -34,7 +34,7 @@ func createTeams():
 	for i in range(5):
 		var teamInstance = team_scene.instantiate()
 		$QuestionField/HBoxContainer2/TeamContainer.add_child(teamInstance)
-		teamInstance.setTeam("Team %d" % (i))
+		teamInstance.setTeam("Team %d" % (i), i)
 		teamArray.append(teamInstance)
 
 func _on_popup_question(reward, questionText, alt1, alt2, alt3, correctAnswer):
@@ -55,4 +55,4 @@ func _on_scores_updated(new_scores: Array):
 
 func _on_change_team(teamNumber: int):
 	for i in range(teamArray.size()):
-		teamArray[i].toggleLight(i == teamNumber)
+		teamArray[i].toggleActive(i == teamNumber)
