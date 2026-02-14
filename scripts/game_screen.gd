@@ -14,6 +14,7 @@ func _ready() -> void:
 	var json_string = FileAccess.get_file_as_string(file)
 	GlobalData.scores_updated.connect(_on_scores_updated)
 	GlobalData.change_current_team.connect(_on_change_team)
+	$TeamNameInput.submit_team_name.connect(_update_team_name)
 	
 	var json_as_dict: Dictionary = JSON.parse_string(json_string)
 	if !json_as_dict:
@@ -36,6 +37,7 @@ func createTeams():
 		$QuestionField/HBoxContainer2/TeamContainer.add_child(teamInstance)
 		teamInstance.setTeam("Team %d" % (i), i)
 		teamArray.append(teamInstance)
+		teamInstance.team_clicked.connect(_activate_change_team_name)
 
 func _on_popup_question(reward, questionText, alt1, alt2, alt3, correctAnswer):
 	var questionContainerInstance = question_container_scene.instantiate()
@@ -56,3 +58,9 @@ func _on_scores_updated(new_scores: Array):
 func _on_change_team(teamNumber: int):
 	for i in range(teamArray.size()):
 		teamArray[i].toggleActive(i == teamNumber)
+
+func _activate_change_team_name(teamNumber: int):
+	$TeamNameInput.activate(teamNumber)
+
+func _update_team_name(newName: String, teamNumber: int):
+	teamArray[teamNumber].changeTeamName(newName)

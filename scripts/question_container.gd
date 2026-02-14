@@ -26,9 +26,6 @@ func _input(event: InputEvent) -> void:
 			GlobalData.changeCurrentTeam(3)
 		if event.is_action_pressed("button_4") && teamCanAnswer[4]:
 			GlobalData.changeCurrentTeam(4)
-	
-	#TODO: keybinding for the team buttons
-	pass
 
 func setQuestionData(score, questionText, alt1, alt2, alt3, correctAnswer):
 	reward = score
@@ -40,7 +37,6 @@ func setQuestionData(score, questionText, alt1, alt2, alt3, correctAnswer):
 
 func closeQuestion():
 	close_popup_question.emit()
-	print(teamCanAnswer)
 	GlobalData.changeCurrentTeam(9)
 	queue_free()
 
@@ -69,7 +65,6 @@ func _on_option_1_pressed() -> void:
 		wrongAnswer(1)
 		return
 	correctAnswer()
-	print("Pressed 1")
 
 
 func _on_option_2_pressed() -> void:
@@ -79,7 +74,6 @@ func _on_option_2_pressed() -> void:
 		wrongAnswer(2)
 		return
 	correctAnswer()
-	print("Pressed 2")
 
 
 func _on_option_3_pressed() -> void:
@@ -89,5 +83,3 @@ func _on_option_3_pressed() -> void:
 		wrongAnswer(3)
 		return
 	correctAnswer()
-	
-	print("Pressed 3")

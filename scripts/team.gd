@@ -1,5 +1,7 @@
 extends MarginContainer
 
+signal team_clicked(teamNumber: int)
+
 var teamNumber: int
 var audioRefArray = []
 
@@ -30,3 +32,10 @@ func toggleActive(active: bool):
 	$TeamLight.enabled = active
 	if (active):
 		$AudioStreamPlayer.play()
+		$Particles.emitting = true
+
+func changeTeamName(newName: String):
+	$VBoxContainer/TeamName.text = newName
+
+func _on_button_pressed() -> void:
+	team_clicked.emit(teamNumber)

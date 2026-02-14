@@ -100,11 +100,11 @@
 				"correctAlt": 3
 			},
 			"q4": {
-				"question": "I Windsor Pumpkin Regatte, som blir arrangert i Canada, padler man i et løp med kayaker laget av gresskar. Hvor langt er løpet?",
-				"alt1": "800m",
-				"alt2": "400m",
-				"alt3": "1600m",
-				"correctAlt": 1
+				"question": "Yukigassen er en snøballkrig konkurranse fra Japan. Det er i dag årlige turneringer. 3 land er med, hvilket er ikke med på Yukigassen?",
+				"alt1": "Finland",
+				"alt2": "Norge",
+				"alt3": "Sverige",
+				"correctAlt": 3
 			},
 			"q5": {
 				"question": "I sporten kamel-hopping fra Yemen, hvor mange kameler hoppet verdensrekordholderen Zaid Omer over?",

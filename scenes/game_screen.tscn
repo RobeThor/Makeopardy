@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bgwmlts31i1rx"]
+[gd_scene load_steps=8 format=3 uid="uid://bgwmlts31i1rx"]
 
 [ext_resource type="Script" uid="uid://cbg7dlippjgqe" path="res://scripts/game_screen.gd" id="1_3uriw"]
 [ext_resource type="PackedScene" uid="uid://b31llil8ubwyr" path="res://scenes/logo.tscn" id="2_3uriw"]
 [ext_resource type="Texture2D" uid="uid://bicyrr52lm6wl" path="res://art/rectangle.png" id="3_3uriw"]
+[ext_resource type="Theme" uid="uid://bb774gsilu77b" path="res://themes/white_text.tres" id="4_dv2sx"]
+[ext_resource type="Script" uid="uid://bwt6y66h67c0f" path="res://scripts/team_name_input.gd" id="5_rxmqw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xwjjp"]
 bg_color = Color(0.972549, 0.784314, 0.0666667, 1)
@@ -31,7 +33,7 @@ theme_override_constants/margin_left = 40
 [node name="HBoxContainer2" type="HBoxContainer" parent="QuestionField"]
 light_mask = 17
 layout_mode = 2
-theme_override_constants/separation = 105
+theme_override_constants/separation = 30
 
 [node name="CenterContainer" type="CenterContainer" parent="QuestionField/HBoxContainer2"]
 layout_mode = 2
@@ -63,10 +65,13 @@ range_item_cull_mask = 16
 texture = ExtResource("3_3uriw")
 texture_scale = 9.85
 
-[node name="TextEdit" type="TextEdit" parent="."]
+[node name="TeamNameInput" type="LineEdit" parent="."]
 visible = false
-layout_mode = 2
-offset_left = 12.0
-offset_top = 446.0
-offset_right = 1892.0
-offset_bottom = 800.0
+layout_mode = 0
+offset_left = 1054.0
+offset_top = 267.0
+offset_right = 1457.0
+offset_bottom = 354.0
+theme = ExtResource("4_dv2sx")
+max_length = 25
+script = ExtResource("5_rxmqw")
