@@ -187,3 +187,4 @@ visibility_rect = Rect2(-195, -91.5, 400, 180)
 process_material = SubResource("ParticleProcessMaterial_ebdvi")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

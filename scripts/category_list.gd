@@ -28,6 +28,7 @@ func setQuestion(question):
 	questionOptionInstance.question_clicked.connect(_on_popup_question)
 	add_child(questionOptionInstance)
 	score += 100
+	GlobalData.addQuestion()
 
 func _on_popup_question(reward, questionText, alt1, alt2, alt3, correctAnswer):
 	popup_question.emit(reward, questionText, alt1, alt2, alt3, correctAnswer)

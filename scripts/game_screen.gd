@@ -14,6 +14,7 @@ func _ready() -> void:
 	var json_string = FileAccess.get_file_as_string(file)
 	GlobalData.scores_updated.connect(_on_scores_updated)
 	GlobalData.change_current_team.connect(_on_change_team)
+	GlobalData.game_finished.connect(_on_game_finished)
 	$TeamNameInput.submit_team_name.connect(_update_team_name)
 	
 	var json_as_dict: Dictionary = JSON.parse_string(json_string)
@@ -50,6 +51,7 @@ func _on_popup_question(reward, questionText, alt1, alt2, alt3, correctAnswer):
 func _on_close_popup_question():
 	GlobalData.question_open = false
 	$GlobalLight.enabled = false
+	GlobalData.updateQuestionsAnswered()
 	
 func _on_scores_updated(new_scores: Array):
 	for i in range(teamArray.size()):
@@ -64,3 +66,6 @@ func _activate_change_team_name(teamNumber: int):
 
 func _update_team_name(newName: String, teamNumber: int):
 	teamArray[teamNumber].changeTeamName(newName)
+
+func _on_game_finished(winningTeam: int):
+	teamArray[winningTeam].celebrate()
