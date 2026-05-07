@@ -9,11 +9,6 @@ var reward: int
 
 var teamCanAnswer: Array[bool] = [true, true, true, true, true]
 
-#TODO: Add time limit? Or other way to close a question
-
-func _ready() -> void:
-	pass
-
 func _input(event: InputEvent) -> void:
 	if GlobalData.currentTeam == 9:
 		if event.is_action_pressed("button_0") && teamCanAnswer[0]:
@@ -27,13 +22,13 @@ func _input(event: InputEvent) -> void:
 		if event.is_action_pressed("button_4") && teamCanAnswer[4]:
 			GlobalData.changeCurrentTeam(4)
 
-func setQuestionData(score, questionText, alt1, alt2, alt3, correctAnswer):
+func setQuestionData(score, questionText, alt1, alt2, alt3, answer):
 	reward = score
 	$QuestionBox/QuestionTextContainer/QuestionText.text = questionText
 	$QuestionBox/OptionsList/Option1.text = alt1
 	$QuestionBox/OptionsList/Option2.text = alt2
 	$QuestionBox/OptionsList/Option3.text = alt3
-	correctOption = correctAnswer
+	correctOption = answer
 
 func closeQuestion():
 	close_popup_question.emit()
