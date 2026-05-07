@@ -5,9 +5,12 @@ extends VBoxContainer
 
 signal popup_question(reward, questionText, alt1, alt2, alt3, correctAnswer)
 
+var pageScoreMultiplier: int = 1
 var score: int = 100
 
-func provideCategoryData(categoryData: Dictionary):
+func provideCategoryData(categoryData: Dictionary, page: int):
+	pageScoreMultiplier = page + 1
+	score *= pageScoreMultiplier
 	for questionNum in categoryData:
 		if questionNum == "categoryName":
 			var categoryTitle = categoryData[questionNum]
@@ -27,9 +30,8 @@ func setQuestion(question):
 	questionOptionInstance.setData(score, question)
 	questionOptionInstance.question_clicked.connect(_on_popup_question)
 	add_child(questionOptionInstance)
-	score += 100
+	score += 100 * pageScoreMultiplier
 	GlobalData.addQuestion()
 
 func _on_popup_question(reward, questionText, alt1, alt2, alt3, correctAnswer):
 	popup_question.emit(reward, questionText, alt1, alt2, alt3, correctAnswer)
-	pass

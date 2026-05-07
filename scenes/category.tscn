@@ -7,5 +7,4 @@ light_mask = 17
 offset_right = 280.0
 offset_bottom = 961.0
 theme_override_constants/separation = 15
-alignment = 1
 script = ExtResource("1_2gaid")

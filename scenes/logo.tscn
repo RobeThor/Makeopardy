@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b31llil8ubwyr"]
+[gd_scene load_steps=7 format=3 uid="uid://b31llil8ubwyr"]
 
 [ext_resource type="Texture2D" uid="uid://bejqnlsrte6yr" path="res://art/jeopardy.svg" id="1_redmh"]
 [ext_resource type="Texture2D" uid="uid://cvuciivo5ymuw" path="res://art/MAKE NTNU logo skygge.png" id="2_6tpak"]
 [ext_resource type="Texture2D" uid="uid://xms2k0hlcb7i" path="res://art/MAKE NTNU logo.png" id="2_574r7"]
+[ext_resource type="Texture2D" uid="uid://dm0ou3r545tbq" path="res://art/disney_logo_no_bg.png" id="4_6tpak"]
 
 [sub_resource type="Gradient" id="Gradient_574r7"]
 offsets = PackedFloat32Array(0.818965, 1)
@@ -24,17 +25,17 @@ stretch_mode = 4
 layout_mode = 0
 offset_left = -2.0
 offset_top = -3.0
-offset_right = 254.0
+offset_right = 353.0
 offset_bottom = 293.0
 texture = SubResource("GradientTexture1D_6tpak")
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect"]
 layout_mode = 0
-offset_left = -27.0
-offset_top = 252.0
-offset_right = 341.0
-offset_bottom = 334.0
-rotation = -0.872665
+offset_left = -13.0
+offset_top = 221.0
+offset_right = 370.0
+offset_bottom = 311.0
+rotation = -0.610865
 texture = ExtResource("2_574r7")
 expand_mode = 1
 stretch_mode = 4
@@ -48,5 +49,15 @@ offset_right = 344.0
 offset_bottom = 324.0
 rotation = -0.872665
 texture = ExtResource("2_6tpak")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 465.0
+offset_top = -48.0
+offset_right = 1741.0
+offset_bottom = 391.0
+texture = ExtResource("4_6tpak")
 expand_mode = 1
 stretch_mode = 4

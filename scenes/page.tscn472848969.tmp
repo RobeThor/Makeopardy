@@ -1,0 +1,127 @@
+[gd_scene load_steps=3 format=3 uid="uid://47xs3fe2revf"]
+
+[ext_resource type="Script" uid="uid://gw48hltlxpb6" path="res://scripts/page.gd" id="1_kkqxg"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_kkqxg"]
+script/source = "using System.Collections.Generic;
+using System.Linq;
+using Godot;
+
+namespace Game.UI.Util;
+
+[GlobalClass]
+[Tool]
+public partial class PassthroughContainer : Container
+{
+	private bool centerPivotOffset;
+
+	// This is not relevant to this script's function
+	// it's just a nice way to center the pivot offset
+	[Export]
+	private bool CenterPivotOffset
+	{
+		get => centerPivotOffset;
+		set
+		{
+			centerPivotOffset = value;
+			QueueSort();
+		}
+	}
+
+	public override void _Ready()
+	{
+		SortChildren += OnSortChildren;
+	}
+
+	public override string[] _GetConfigurationWarnings()
+	{
+		if (GetChildren().Count(x => x is Control) > 1)
+		{
+			return [\"PassthroughContainer only works with a single Control child!\"];
+		}
+		return [];
+	}
+
+	private Control GetFirstChildControl()
+	{
+		return GetChildren().FirstOrDefault(x => x is Control) as Control;
+	}
+
+	private void DoSort()
+	{
+		// target root of passthrough chain
+		if (GetParent() is PassthroughContainer passthroughContainerRoot)
+		{
+			passthroughContainerRoot.DoSort();
+			return;
+		}
+
+		// find deepest nested non-passthrough control node
+		Control rootChild = GetFirstChildControl();
+
+		var passthroughList = new List<PassthroughContainer>();
+		while (rootChild is PassthroughContainer passthroughContainer)
+		{
+			passthroughList.Add(passthroughContainer);
+			rootChild = passthroughContainer.GetFirstChildControl();
+		}
+
+		if (rootChild != null)
+		{
+			SizeFlagsHorizontal = rootChild.SizeFlagsHorizontal;
+			SizeFlagsVertical = rootChild.SizeFlagsVertical;
+
+			rootChild.Size = Vector2.Zero;
+			// set minimum size, for shrink-related size flags
+			CustomMinimumSize = rootChild.GetCombinedMinimumSize();
+			// set root child size to the root passthrough size, for fill-related flags
+			rootChild.Size = Size;
+
+			if (centerPivotOffset)
+			{
+				rootChild.PivotOffset = rootChild.Size / 2f;
+			}
+			else
+			{
+				rootChild.PivotOffset = Vector2.Zero;
+			}
+			PivotOffset = rootChild.PivotOffset;
+			if (Engine.IsEditorHint())
+			{
+				rootChild.Position = Vector2.Zero;
+			}
+		}
+
+		// ensure every passthrough item matches size and flags
+		foreach (var pt in passthroughList)
+		{
+			pt.centerPivotOffset = CenterPivotOffset;
+			pt.SizeFlagsHorizontal = SizeFlagsHorizontal;
+			pt.SizeFlagsVertical = SizeFlagsVertical;
+			pt.CustomMinimumSize = CustomMinimumSize;
+			pt.Size = Size;
+			pt.PivotOffset = PivotOffset;
+		}
+	}
+
+	private void OnSortChildren()
+	{
+		DoSort();
+	}
+}
+"
+
+[node name="PassthroughContainer" type="Container"]
+offset_left = 20.0
+offset_right = 20.0
+offset_bottom = 40.0
+script = SubResource("CSharpScript_kkqxg")
+
+[node name="Page" type="MarginContainer" parent="."]
+layout_mode = 2
+script = ExtResource("1_kkqxg")
+
+[node name="CategoriesContainer" type="HBoxContainer" parent="Page"]
+light_mask = 17
+layout_mode = 2
+alignment = 1
