@@ -30,11 +30,9 @@ func createPages(pages: Dictionary):
 		var page_instance = page_scene.instantiate()
 		page_container.add_child(page_instance)
 		page_instance.providePageData(pages[page], pageCount)
-		GlobalData.pageArray.append([page_instance, GlobalData.numberOfQuestions])
 		page_instance.popup_question.connect(_on_popup_question)
-		page_instance.visible = false
 		pageCount += 1
-	GlobalData.pageArray[0][0].visible = true
+	GlobalData.pageArray[0][0].revealPage()
 
 func createTeams():
 	for i in range(5):
@@ -74,7 +72,7 @@ func _update_team_name(newName: String, teamNumber: int):
 func _on_page_complete(newPageNumber: int):
 	print("Page complete")
 	GlobalData.pageArray[newPageNumber-1][0].visible = false
-	GlobalData.pageArray[newPageNumber][0].visible = true
+	GlobalData.pageArray[newPageNumber][0].revealPage()
 
 func _on_game_finished(winningTeam: int):
 	teamArray[winningTeam].celebrate()
