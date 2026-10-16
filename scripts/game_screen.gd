@@ -6,23 +6,18 @@ extends Panel
 
 @onready var page_container = $QuestionField/HBoxContainer2/CenterContainer/VBoxContainer/PageContainer
 
-var file = "res://jeopardyFormat.json"
 var teamArray = []
 
 func _ready() -> void:
-	var json_string = FileAccess.get_file_as_string(file)
 	GlobalData.scores_updated.connect(_on_scores_updated)
 	GlobalData.change_current_team.connect(_on_change_team)
 	GlobalData.page_complete.connect(_on_page_complete)
 	GlobalData.game_finished.connect(_on_game_finished)
 	$TeamNameInput.submit_team_name.connect(_update_team_name)
 	
-	var json_as_dict: Dictionary = JSON.parse_string(json_string)
-	if !json_as_dict:
-		print("Error parsing JSON")
-		return
-	createPages(json_as_dict.pages)
 	createTeams()
+	$QuestionSetDialog.popup()
+
 
 func createPages(pages: Dictionary):
 	var pageCount := 0
@@ -76,3 +71,20 @@ func _on_page_complete(newPageNumber: int):
 
 func _on_game_finished(winningTeam: int):
 	teamArray[winningTeam].celebrate()
+
+func loadQuestionSet(file: String) -> void:
+	var json_string = FileAccess.get_file_as_string(file)
+	var json_as_dict: Dictionary = JSON.parse_string(json_string)
+	if !json_as_dict:
+		print("Error parsing JSON")
+		return
+	createPages(json_as_dict.pages)
+
+func _on_file_dialog_file_selected(path: String) -> void:
+	loadQuestionSet(path)
+
+func _on_question_set_dialog_canceled() -> void:
+	loadQuestionSet("res://jeopardyFormat.json")
+
+func _on_question_set_dialog_confirmed() -> void:
+	$FileDialog.popup()

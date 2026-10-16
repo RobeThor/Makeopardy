@@ -4,7 +4,6 @@ extends MarginContainer
 @export var question_container_scene := preload("res://scenes/question_container.tscn")
 
 signal popup_question(reward, questionText, alt1, alt2, alt3, correctAnswer)
-signal page_created()
 
 @onready var categories_container = $CategoriesContainer
 

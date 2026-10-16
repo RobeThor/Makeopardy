@@ -190,7 +190,7 @@
 					"alt3": "30. august",
 					"correctAlt": 3
 				}
-			}
+			},
 		},
 		"page2": {
 			"cat1": {
@@ -381,8 +381,8 @@
 					"alt2": "8. juni",
 					"alt3": "30. august",
 					"correctAlt": 3
-				}
-			}
+				},
+			},
 		},
 		"page3": {
 			"cat1": {
@@ -573,8 +573,8 @@
 					"alt2": "8. juni",
 					"alt3": "30. august",
 					"correctAlt": 3
-				}
-			}
-		}
+				},
+			},
+		},
 	}
 }

@@ -56,6 +56,7 @@ layout_mode = 2
 alignment = 1
 
 [node name="GlobalLight" type="PointLight2D" parent="."]
+visible = false
 position = Vector2(1356, 270)
 scale = Vector2(0.766107, 0.680623)
 enabled = false
@@ -75,3 +76,23 @@ offset_bottom = 234.0
 theme = ExtResource("4_dv2sx")
 max_length = 25
 script = ExtResource("5_rxmqw")
+
+[node name="FileDialog" type="FileDialog" parent="."]
+title = "Select a question set"
+initial_position = 1
+size = Vector2i(1280, 640)
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.json")
+
+[node name="QuestionSetDialog" type="ConfirmationDialog" parent="."]
+title = "Load Questions"
+initial_position = 1
+size = Vector2i(400, 84)
+ok_button_text = "Load Question Set"
+dialog_text = "Do you want to load a custom question set?"
+cancel_button_text = "Use Standard"
+
+[connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]
+[connection signal="canceled" from="QuestionSetDialog" to="." method="_on_question_set_dialog_canceled"]
+[connection signal="confirmed" from="QuestionSetDialog" to="." method="_on_question_set_dialog_confirmed"]

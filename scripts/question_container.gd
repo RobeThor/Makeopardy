@@ -9,6 +9,9 @@ var reward: int
 
 var teamCanAnswer: Array[bool] = [true, true, true, true, true]
 
+func integerDivision(number: int, divisor: int) -> int:
+	return int(float(number)/divisor)
+
 func _input(event: InputEvent) -> void:
 	if GlobalData.currentTeam == 9:
 		if event.is_action_pressed("button_0") && teamCanAnswer[0]:
@@ -44,11 +47,11 @@ func correctAnswer():
 
 func wrongAnswer(buttonNumber):
 	teamCanAnswer[GlobalData.currentTeam] = false
-	wrong_answer.emit(GlobalData.currentTeam, reward/2)
+	wrong_answer.emit(GlobalData.currentTeam, integerDivision(reward, 2))
 	get_node("QuestionBox/OptionsList/Option%d" %buttonNumber).disabled = true
 	
 	var scoreArray := [0,0,0,0,0]
-	scoreArray[GlobalData.currentTeam] -= reward/2
+	scoreArray[GlobalData.currentTeam] -= integerDivision(reward, 2)
 	GlobalData.updateScore(scoreArray)
 	
 	GlobalData.changeCurrentTeam(9)
